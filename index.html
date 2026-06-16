@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Betsaleel Docs - Documents BAC Burkina</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Firebase CDN compat v9 - MARCHE AVEC TON PROJET NPM -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="logo">Betsaleel Docs</div>
+      <button id="cartBtn" class="cart-btn">
+        🛒 Panier <span id="cartCount" class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Révise malin. Réussis ton BAC.</h1>
+      <p>Résumés, exercices corrigés et fiches méthodo pour Tle A, C, D. Paiement Orange Money. Envoi auto par email.</p>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Tout</button>
+        <button class="filter-btn" data-filter="Tle">Terminale</button>
+        <button class="filter-btn" data-filter="Maths">Maths</button>
+        <button class="filter-btn" data-filter="PC">Physique-Chimie</button>
+        <button class="filter-btn" data-filter="Philo">Philosophie</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <div id="docsGrid" class="grid"></div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© 2026 Betsaleel Docs • Ouagadougou, Burkina Faso • WhatsApp : +226 06 62 57 15</p>
+    </div>
+  </footer>
+
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Ton panier</h2>
+        <button id="closeCart" class="icon-btn">✕</button>
+      </div>
+      <div id="cartItems"></div>
+      <div class="modal-footer">
+        <div class="total">Total : <span id="cartTotal">0 FCFA</span></div>
+        <button id="checkoutBtn" class="btn full">Commander</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="checkoutModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Finaliser la commande</h2>
+        <button id="closeCheckout" class="icon-btn">✕</button>
+      </div>
+      <div class="om-instructions">
+        <strong>1. Paie via Orange Money au +226 06 62 57 15</strong><br>
+        Montant : <span id="cartTotal2"></span><br>
+        <strong>2. Remplis le formulaire avec l’ID de transaction</strong>
+      </div>
+      <form id="checkoutForm">
+        <input id="clientName" type="text" placeholder="Nom complet" required>
+        <input id="clientEmail" type="email" placeholder="Email de réception" required>
+        <input id="transactionId" type="text" placeholder="ID transaction Orange Money" required>
+        <input id="clientPhone" type="tel" placeholder="Téléphone WhatsApp" required>
+        <button id="submitOrder" class="btn full">Confirmer la commande</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="successModal" class="modal">
+    <div class="modal-content" style="text-align:center">
+      <h2>Commande reçue ! 🎉</h2>
+      <p>On vérifie ton paiement Orange Money. Tu reçois tes documents par email dans 5 minutes max.</p>
+      <p style="color:var(--muted);font-size:14px">Problème ? WhatsApp +226 06 62 57 15</p>
+      <button id="closeSuccess" class="btn">Fermer</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

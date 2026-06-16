@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin - Betsaleel Docs</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+  <div id="loginScreen" class="login-screen">
+    <div class="login-box">
+      <h1>Admin Betsaleel</h1>
+      <form id="adminLogin">
+        <input id="adminPass" type="password" placeholder="Mot de passe" required>
+        <button class="btn full">Se connecter</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="adminDashboard" style="display:none">
+    <header>
+      <div class="wrap">
+        <div class="logo">Admin Betsaleel</div>
+        <a href="index.html" class="btn ghost">Voir le site</a>
+      </div>
+    </header>
+    <main class="wrap" style="padding:40px 20px;display:grid;gap:32px;grid-template-columns:1fr 1fr">
+      <section>
+        <h2>Ajouter un document</h2>
+        <form id="docForm" class="admin-form">
+          <input id="docTitle" type="text" placeholder="Titre ex: Maths Tle D - Résumé" required>
+          <select id="docNiveau" required>
+            <option value="">Niveau</option>
+            <option>Tle</option><option>1ère</option><option>2nde</option>
+          </select>
+          <select id="docMatiere" required>
+            <option value="">Matière</option>
+            <option>Maths</option><option>PC</option><option>Philo</option><option>Français</option><option>Anglais</option><option>SVT</option><option>HG</option>
+          </select>
+          <input id="docPrice" type="number" placeholder="Prix FCFA" required>
+          <input id="docDriveId" type="text" placeholder="ID Google Drive" required>
+          <textarea id="docDesc" placeholder="Description" rows="3"></textarea>
+          <input id="docImage" type="url" placeholder="URL Image (optionnel)">
+          <button class="btn full">Publier le document</button>
+        </form>
+      </section>
+      <section>
+        <h2>Documents en ligne</h2>
+        <div id="docsList"></div>
+        <h2 style="margin-top:32px">Commandes récentes</h2>
+        <div id="ordersList"></div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
