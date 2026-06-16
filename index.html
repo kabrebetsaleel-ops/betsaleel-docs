@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Betsaleel Docs - Documents de qualité pour lycéens au Burkina Faso. Seconde, Première, Terminale.">
+  <title>Betsaleel Docs | Plateforme d'Excellence Lycée</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+  <div class="bg-blur"></div>
+  
+  <header id="header">
+    <nav class="container">
+      <a href="#" class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+        <div class="logo-text">Betsaleel<span>Docs</span></div>
+      </a>
+      <div class="nav-menu" id="nav-menu">
+        <a href="#accueil" class="nav-link active">Accueil</a>
+        <a href="#documents" class="nav-link">Documents</a>
+        <a href="#temoignages" class="nav-link">Témoignages</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#apropos" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#" id="panier-btn" class="nav-panier">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span id="panier-count" class="panier-badge">0</span>
+        </a>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge reveal-up"><i class="fa-solid fa-star"></i> N°1 des documents lycée au BF</div>
+          <h1 class="reveal-up">Passe au niveau <span class="gradient-text">supérieur</span> dans tes études</h1>
+          <p class="reveal-up delay-1">Résumés de cours ultra-clairs, exercices corrigés pas à pas et sujets types BAC. Conçus par des experts pour la Seconde, Première et Terminale.</p>
+          <div class="hero-cta reveal-up delay-2">
+            <a href="#documents" class="btn btn-primary btn-lg"><i class="fa-solid fa-rocket"></i> Commencer maintenant</a>
+            <a href="#demo" class="btn btn-glass"><i class="fa-solid fa-play"></i> Voir la démo</a>
+          </div>
+          <div class="hero-trust reveal-up delay-3">
+            <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> Paiement sécurisé</div>
+            <div class="trust-item"><i class="fa-solid fa-bolt"></i> Livraison en 2h</div>
+            <div class="trust-item"><i class="fa-solid fa-users"></i> 500+ élèves satisfaits</div>
+          </div>
+        </div>
+        <div class="hero-image reveal-left">
+          <div class="hero-card card-1"><i class="fa-solid fa-square-root-variable"></i><span>Maths Tle D</span></div>
+          <div class="hero-card card-2"><i class="fa-solid fa-flask"></i><span>Physique-Chimie</span></div>
+          <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=2072" alt="Élève qui réussit">
+        </div>
+      </div>
+    </section>
+
+    <section id="documents" class="section">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">Catalogue</span>
+          <h2>Trouve le document parfait pour toi</h2>
+          <p>Tous nos documents sont créés par des professeurs et validés par des correcteurs du BAC.</p>
+        </div>
+        
+        <div class="toolbar reveal-up">
+          <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="search-input" placeholder="Rechercher : Maths, Philo, BAC 2025...">
+          </div>
+          <div class="filtres">
+            <button class="filtre-btn active" data-niveau="all">Tous</button>
+            <button class="filtre-btn" data-niveau="Seconde">Seconde</button>
+            <button class="filtre-btn" data-niveau="Premiere">Première</button>
+            <button class="filtre-btn" data-niveau="Terminale">Terminale</button>
+          </div>
+        </div>
+
+        <div id="liste-documents" class="grid-docs"></div>
+        <div id="loader" class="loader"><div class="spinner"></div></div>
+      </div>
+    </section>
+
+    <section id="temoignages" class="section bg-gradient">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag light">Avis clients</span>
+          <h2>Ils ont cartonné grâce à nous</h2>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal-up">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"J'ai eu 16 en Maths au BAC grâce au document sur les fonctions. Les explications sont mieux qu'en classe !"</p>
+            <div class="author"><img src="https://i.pravatar.cc/40?img=1"><div><strong>Aïcha K.</strong><span>Terminale D, Ouaga</span></div></div>
+          </div>
+          <div class="testimonial-card reveal-up delay-1">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"Livraison super rapide sur WhatsApp. Le doc de Philo m'a sauvé pour la dissert. Je recommande à 100%."</p>
+            <div class="author"><img src="https://i.pravatar.cc/40?img=8"><div><strong>Drissa O.</strong><span>Terminale A, Bobo</span></div></div>
+          </div>
+          <div class="testimonial-card reveal-up delay-2">
+            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p>"Enfin un site sérieux ! Pas d'arnaque, on paie et on reçoit direct. Les résumés de SVT sont parfaits."</p>
+            <div class="author"><img src="https://i.pravatar.cc/40?img=5"><div><strong>Fatou S.</strong><span>Première C, Koudougou</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag">Support</span>
+          <h2>Questions fréquentes</h2>
+        </div>
+        <div class="faq-container">
+          <div class="faq-item reveal-up">
+            <div class="faq-question"><span>Comment je reçois mon document ?</span><i class="fa-solid fa-plus"></i></div>
+            <div class="faq-answer">Après paiement Orange Money ou Wave, tu reçois un lien de téléchargement sécurisé par email et WhatsApp sous 2h max. Le lien expire en 24h.</div>
+          </div>
+          <div class="faq-item reveal-up">
+            <div class="faq-question"><span>Les documents sont-ils fiables ?</span><i class="fa-solid fa-plus"></i></div>
+            <div class="faq-answer">Oui. 100% créés par des enseignants et anciens correcteurs du BAC. Aucun plagiat. Chaque doc est vérifié avant mise en ligne.</div>
+          </div>
+          <div class="faq-item reveal-up">
+            <div class="faq-question"><span>Puis-je me faire rembourser ?</span><i class="fa-solid fa-plus"></i></div>
+            <div class="faq-answer">Comme il s'agit de produits digitaux livrés instantanément, aucun remboursement n'est possible. Mais on t'offre un aperçu gratuit de chaque doc avant achat.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="apropos" class="section">
+      <div class="container contact-grid">
+        <div class="contact-info reveal-right">
+          <span class="section-tag">Contact</span>
+          <h2>Une question ? Parlons-en.</h2>
+          <p>Je réponds personnellement à tous les messages sous 4h en journée.</p>
+          <div class="contact-methods">
+            <a href="https://wa.me/22606625715" class="contact-card"><i class="fa-brands fa-whatsapp"></i><div><strong>WhatsApp</strong><span>+226 06 62 57 15</span></div></a>
+            <a href="mailto:betsaleelbusiness@gmail.com" class="contact-card"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><span>betsaleelbusiness@gmail.com</span></div></a>
+          </div>
+        </div>
+        <div class="contact-form reveal-left">
+          <form id="form-contact">
+            <input type="text" placeholder="Ton nom" required>
+            <input type="email" placeholder="Ton email" required>
+            <textarea placeholder="Ton message" rows="5" required></textarea>
+            <button type="submit" class="btn btn-primary w-full">Envoyer le message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODALS -->
+  <div id="modal-panier" class="modal">
+    <div class="modal-content">
+      <div class="modal-header"><h3>Ton Panier</h3><span class="close">&times;</span></div>
+      <div id="contenu-panier" class="modal-body"></div>
+      <div class="modal-footer">
+        <div class="total"><span>Total</span><strong id="total-panier">0 FCFA</strong></div>
+        <button id="commander-btn" class="btn btn-primary w-full">Procéder au paiement</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-paiement" class="modal">
+    <div class="modal-content">
+      <div class="modal-header"><h3>Paiement Mobile Money</h3><span class="close">&times;</span></div>
+      <div class="modal-body">
+        <div class="paiement-recap">Montant : <strong id="montant-paiement">0 FCFA</strong></div>
+        <div class="paiement-steps">
+          <div class="step"><span>1</span><p>Fais le dépôt au <strong>06 62 57 15</strong><br>Nom : Kabré Betsaleel</p></div>
+          <div class="step"><span>2</span><p>Remplis le formulaire avec l'ID de transaction</p></div>
+        </div>
+        <form id="form-paiement">
+          <input type="text" id="nom-client" placeholder="Nom & Prénom" required>
+          <input type="email" id="email-client" placeholder="Email de réception" required>
+          <input type="tel" id="numero-paiement" placeholder="Numéro qui a payé" required>
+          <input type="text" id="id-transaction" placeholder="ID Transaction OM/Wave" required>
+          <button type="submit" class="btn btn-primary w-full">J'ai payé, valider ma commande</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col"><div class="logo"><div class="logo-icon"><i class="fa-solid fa-book-bookmark"></i></div><div class="logo-text">Betsaleel<span>Docs</span></div></div><p>L'excellence scolaire à portée de clic.</p></div>
+      <div class="footer-col"><h4>Navigation</h4><a href="#documents">Documents</a><a href="#faq">FAQ</a><a href="#apropos">Contact</a></div>
+      <div class="footer-col"><h4>Légal</h4><a href="#">CGV</a><a href="#">Confidentialité</a></div>
+      <div class="footer-col"><h4>Paiement</h4><div class="payment-icons"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Orange_Money_logo.svg"><img src="https://s.rfi.fr/media/display/1e7f5c96-8b1a-11ec-9b4a-005056a97e36/w:1280/p:16x9/wave-senegal_0.jpg"></div></div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 Betsaleel Docs. Tous droits réservés.</div>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
